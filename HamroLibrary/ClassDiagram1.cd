@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HamroLibrary.About" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>About.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.AddAuthor" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAIABAAAABAAAQAAAAAAAAAAAAAAAAIAACA=</HashCode>
+      <FileName>AddAuthor.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.AddBook" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AANAAAAAkAAkAAAAAAAAQQAAAAAQBAAAAAAFAAIBCCA=</HashCode>
+      <FileName>AddBook.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.AddMember" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAACIABAAAABBIgQAAgAIAAAAgAAAAgAIAACA=</HashCode>
+      <FileName>AddMember.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.AddPublisher" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAABAAAQgAAAIEAAAAAAAAAAIAACA=</HashCode>
+      <FileName>AddPublisher.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Adduser" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACSAAAAAIAAAAARQAAAAACACCAAAAAAIAIAA=</HashCode>
+      <FileName>Adduser.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.BundleConfig" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\BundleConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.EmailService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\IdentityConfig.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HamroLibrary.SmsService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\IdentityConfig.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HamroLibrary.ApplicationUserManager" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\IdentityConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.ApplicationSignInManager" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\IdentityConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.RouteConfig" Collapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\RouteConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Startup" Collapsed="true">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAgAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\Startup.Auth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Author" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoAAAgAIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Author.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Book" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBAAAAAAEAAAABAAAABARAAAACUAAQAAAAAAAIAEAA=</HashCode>
+      <FileName>Book.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Contact" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Contact.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary._Default">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoAAAAAAIAADBABAAFAAAQAAAAAQIAgAAACQAAIAAAE=</HashCode>
+      <FileName>Default.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Editmember" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAQBgAAAAAABABgAAAqgQAAAQIAgAAgAQJAgAIAAAA=</HashCode>
+      <FileName>Editmember.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.HamroLibraryDbEntities1" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAQAABAIAAAAAQAAACAQAAAkEAAAAQAQAAAEEAAAAA=</HashCode>
+      <FileName>erd.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.author" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASAAAAAAAABAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>author.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.book" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAAAAADAAAAABAIgIAAAEAIAAAAAAAAAAAEA=</HashCode>
+      <FileName>book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.bookreturn" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAgAAAAAAAAAAAAAQAACAEAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>bookreturn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Loan" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASAAAAIAAAgAAAAAAEQAAAAEAAAQAAAAAAAECAAAA=</HashCode>
+      <FileName>Loan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.loanCharge" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAgAAAAACAQAAAAAAAAAAAEAAAAAAAAAAQ=</HashCode>
+      <FileName>loanCharge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.loanType" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACBgAAAAAAAIAAAAAQAAAAAAAAgAAACAAAAACAAAA=</HashCode>
+      <FileName>loanType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.member" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASIAAAAAAABAAgAAAIgAAAAAIAAAAgAAAAgAAAAAA=</HashCode>
+      <FileName>member.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.membertype" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACBAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>membertype.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.publisher" Collapsed="true">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAACAAAgAAAIEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>publisher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Stock" Collapsed="true">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAgAAAAAAAQAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Stock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Table" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAgAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.user" Collapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAgAAAIAAAAACIEAAAAAAAAggAAAgE=</HashCode>
+      <FileName>user.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.userlog" Collapsed="true">
+    <Position X="14.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAIQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>userlog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Global" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Loan1" Collapsed="true">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgAAAADQEABAAAAAAAAEQQAAAAAAAggACAAAABIAIAA=</HashCode>
+      <FileName>Loan.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.LoanDetails" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMAAUAAAIAAhBAgAAAAAERAAAAAQAAiEAACAAAIgAAE=</HashCode>
+      <FileName>LoanDetails.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Login" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQoAAAAAAACACAAAAAAAAQAAIAAUAAAAAEAAAAIAAAA=</HashCode>
+      <FileName>Login.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.logout" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>logout.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Member" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAABAAAAAAQwAAAAQAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Member.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.IdentityHelper" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwSAAAAAAAAAAQAABAAgAAAAAAAAIAAgAAACAAAgAAA=</HashCode>
+      <FileName>Models\IdentityModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.OldBook" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAUAAAAAAgAAAAAAAAAQAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>OldBook.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Profile" Collapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBAAAAAAAAAAAAAAAAAAZAAAAAAAAAEAAAAAAIgAAA=</HashCode>
+      <FileName>Profile.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Publisher" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoAAAIAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Publisher.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Register" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAIAIAA=</HashCode>
+      <FileName>Register.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Security">
+    <Position X="12.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Security.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.SiteMaster">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAoAAACAAQKBQIgAIBAEkAABCBAAAAIAAQA=</HashCode>
+      <FileName>Site.Master.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Site_Mobile" Collapsed="true">
+    <Position X="14.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAACAAAAAIAAAIAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Site.Mobile.Master.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.User" Collapsed="true">
+    <Position X="12.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAABAAAQAAAgAAAAAAIAAAA=</HashCode>
+      <FileName>User.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.ViewSwitcher" Collapsed="true">
+    <Position X="2.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEIAAIA=</HashCode>
+      <FileName>ViewSwitcher.ascx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Account.AddPhoneNumber" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAQCAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Account\AddPhoneNumber.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Account.Confirm" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAIIAEAA=</HashCode>
+      <FileName>Account\Confirm.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Account.ForgotPassword" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAAIAAAACCAAAAAAAAAAAAAAAAAAAAAAAAACAIAAAA=</HashCode>
+      <FileName>Account\Forgot.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Account.Lockout" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Account\Lockout.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Account.Login" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAQAAACCAAAAAAAAAAAAQAAAAABACAAAAAAIgAAA=</HashCode>
+      <FileName>Account\Login.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Account.Manage" Collapsed="true">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAADAgAAgUAAAAAAQABAIAAAAQABAAAAAAIkAAA=</HashCode>
+      <FileName>Account\Manage.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Account.ManageLogins" Collapsed="true">
+    <Position X="3" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAABEAAAAQAAAAABAAAAAAAAAAAAAAAAAAIEAAA=</HashCode>
+      <FileName>Account\ManageLogins.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Account.ManagePassword" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAhAAABAACQAAAAANAAAAAAAAAAAAAABAABAgIkAIA=</HashCode>
+      <FileName>Account\ManagePassword.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Account.OpenAuthProviders" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAACAAAAAAAIAAAIAAAA=</HashCode>
+      <FileName>Account\OpenAuthProviders.ascx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Account.Register" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAAAAIAAAAAAAAAAAAAAACAAAAAAAAIAA=</HashCode>
+      <FileName>Account\Register.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Account.RegisterExternalLogin" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAgAIACAAAAACAAAAAAAAAAAAIwAAA=</HashCode>
+      <FileName>Account\RegisterExternalLogin.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Account.ResetPassword" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAACAACAAAAAAAAAAAAAAAAAAAAACAAAAAIAAIAA=</HashCode>
+      <FileName>Account\ResetPassword.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Account.ResetPasswordConfirmation" Collapsed="true">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Account\ResetPasswordConfirmation.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Account.TwoFactorAuthenticationSignIn" Collapsed="true">
+    <Position X="9.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQIAgAAAIACEAAAIABAgAAAEABAAAAAAAAAAAAIIABA=</HashCode>
+      <FileName>Account\TwoFactorAuthenticationSignIn.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Account.VerifyPhoneNumber" Collapsed="true">
+    <Position X="2.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAgQAAAAAAAAAAAAAABAAIAAAA=</HashCode>
+      <FileName>Account\VerifyPhoneNumber.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Models.ApplicationUser" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\IdentityModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HamroLibrary.Models.ApplicationDbContext" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\IdentityModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

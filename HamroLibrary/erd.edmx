@@ -1,0 +1,848 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="HamroLibraryDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="author">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="lname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="fname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="book_id" Type="int" />
+        </EntityType>
+        <EntityType Name="book">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="isbn" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="qty" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="cover" Type="varchar" MaxLength="50" />
+          <Property Name="shelfno" Type="varchar" MaxLength="50" />
+          <Property Name="published_date" Type="date" />
+          <Property Name="edition" Type="varbinary" MaxLength="50" />
+          <Property Name="copyno" Type="nvarchar" MaxLength="50" />
+          <Property Name="restricted" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="bookreturn">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="loan_id" Type="int" />
+          <Property Name="return_date" Type="date" />
+          <Property Name="actual_return_date" Type="date" />
+          <Property Name="due_fine" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Loan">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="book_id" Type="int" />
+          <Property Name="member_id" Type="int" />
+          <Property Name="issue_date" Type="datetime" />
+          <Property Name="return_date" Type="datetime" />
+          <Property Name="loan_request" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="loanCharge">
+          <Key>
+            <PropertyRef Name="charge_id" />
+          </Key>
+          <Property Name="charge_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="minday" Type="int" Nullable="false" />
+          <Property Name="maxday" Type="int" Nullable="false" />
+          <Property Name="charge_amount" Type="float" />
+          <Property Name="loan_id" Type="int" />
+        </EntityType>
+        <EntityType Name="loanType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="member_type" Type="varchar" MaxLength="50" />
+          <Property Name="charge" Type="int" />
+          <Property Name="totalLoans" Type="nvarchar" MaxLength="50" />
+          <Property Name="member_id" Type="int" />
+          <Property Name="loan_id" Type="int" />
+        </EntityType>
+        <EntityType Name="member">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fname" Type="varchar" MaxLength="50" />
+          <Property Name="lname" Type="varchar" MaxLength="50" />
+          <Property Name="address" Type="varchar" MaxLength="50" />
+          <Property Name="gender" Type="varchar" MaxLength="50" />
+          <Property Name="dob" Type="date" />
+          <Property Name="phone" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="mobile" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="password" Type="nvarchar(max)" />
+          <Property Name="user_name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="membertype">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="type" Type="varchar" MaxLength="50" />
+          <Property Name="charge" Type="int" />
+          <Property Name="totalLoans" Type="nvarchar" MaxLength="50" />
+          <Property Name="member_id" Type="int" />
+        </EntityType>
+        <EntityType Name="publisher">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="contcat" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="book_id" Type="int" />
+        </EntityType>
+        <EntityType Name="Stocks">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="book_id" Type="int" />
+          <Property Name="available_qty" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="book_id" Type="int" />
+          <Property Name="available_qty" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="password" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="address" Type="varchar" MaxLength="50" />
+          <Property Name="mobile" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="dob" Type="date" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="update_at" Type="datetime" />
+          <Property Name="user_type" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="userlog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="user_id" Type="int" />
+          <Property Name="w_type" Type="varchar" MaxLength="50" />
+          <Property Name="time" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_author_book">
+          <End Role="book" Type="Self.book" Multiplicity="0..1" />
+          <End Role="author" Type="Self.author" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="book">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="author">
+              <PropertyRef Name="book_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_book">
+          <End Role="book" Type="Self.book" Multiplicity="0..1" />
+          <End Role="Stocks" Type="Self.Stocks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="book">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Stocks">
+              <PropertyRef Name="book_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_bookreturn_Loan">
+          <End Role="Loan" Type="Self.Loan" Multiplicity="0..1" />
+          <End Role="bookreturn" Type="Self.bookreturn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Loan">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="bookreturn">
+              <PropertyRef Name="loan_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Loan_Book">
+          <End Role="book" Type="Self.book" Multiplicity="0..1" />
+          <End Role="Loan" Type="Self.Loan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="book">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Loan">
+              <PropertyRef Name="book_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_loanCharge_Loan">
+          <End Role="Loan" Type="Self.Loan" Multiplicity="0..1" />
+          <End Role="loanCharge" Type="Self.loanCharge" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Loan">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="loanCharge">
+              <PropertyRef Name="loan_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_loanType_loan">
+          <End Role="Loan" Type="Self.Loan" Multiplicity="0..1" />
+          <End Role="loanType" Type="Self.loanType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Loan">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="loanType">
+              <PropertyRef Name="member_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_loanType_member">
+          <End Role="member" Type="Self.member" Multiplicity="0..1" />
+          <End Role="loanType" Type="Self.loanType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="member">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="loanType">
+              <PropertyRef Name="member_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_membertype_member">
+          <End Role="member" Type="Self.member" Multiplicity="0..1" />
+          <End Role="membertype" Type="Self.membertype" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="member">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="membertype">
+              <PropertyRef Name="member_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_publisher_book">
+          <End Role="book" Type="Self.book" Multiplicity="0..1" />
+          <End Role="publisher" Type="Self.publisher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="book">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="publisher">
+              <PropertyRef Name="book_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_userlog_User">
+          <End Role="user" Type="Self.user" Multiplicity="0..1" />
+          <End Role="userlog" Type="Self.userlog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="userlog">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HamroLibraryDbModelStoreContainer">
+          <EntitySet Name="author" EntityType="Self.author" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="book" EntityType="Self.book" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="bookreturn" EntityType="Self.bookreturn" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Loan" EntityType="Self.Loan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="loanCharge" EntityType="Self.loanCharge" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="loanType" EntityType="Self.loanType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="member" EntityType="Self.member" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="membertype" EntityType="Self.membertype" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="publisher" EntityType="Self.publisher" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Stocks" EntityType="Self.Stocks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="userlog" EntityType="Self.userlog" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_author_book" Association="Self.FK_author_book">
+            <End Role="book" EntitySet="book" />
+            <End Role="author" EntitySet="author" />
+          </AssociationSet>
+          <AssociationSet Name="FK_book" Association="Self.FK_book">
+            <End Role="book" EntitySet="book" />
+            <End Role="Stocks" EntitySet="Stocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_bookreturn_Loan" Association="Self.FK_bookreturn_Loan">
+            <End Role="Loan" EntitySet="Loan" />
+            <End Role="bookreturn" EntitySet="bookreturn" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Loan_Book" Association="Self.FK_Loan_Book">
+            <End Role="book" EntitySet="book" />
+            <End Role="Loan" EntitySet="Loan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_loanCharge_Loan" Association="Self.FK_loanCharge_Loan">
+            <End Role="Loan" EntitySet="Loan" />
+            <End Role="loanCharge" EntitySet="loanCharge" />
+          </AssociationSet>
+          <AssociationSet Name="FK_loanType_loan" Association="Self.FK_loanType_loan">
+            <End Role="Loan" EntitySet="Loan" />
+            <End Role="loanType" EntitySet="loanType" />
+          </AssociationSet>
+          <AssociationSet Name="FK_loanType_member" Association="Self.FK_loanType_member">
+            <End Role="member" EntitySet="member" />
+            <End Role="loanType" EntitySet="loanType" />
+          </AssociationSet>
+          <AssociationSet Name="FK_membertype_member" Association="Self.FK_membertype_member">
+            <End Role="member" EntitySet="member" />
+            <End Role="membertype" EntitySet="membertype" />
+          </AssociationSet>
+          <AssociationSet Name="FK_publisher_book" Association="Self.FK_publisher_book">
+            <End Role="book" EntitySet="book" />
+            <End Role="publisher" EntitySet="publisher" />
+          </AssociationSet>
+          <AssociationSet Name="FK_userlog_User" Association="Self.FK_userlog_User">
+            <End Role="user" EntitySet="user" />
+            <End Role="userlog" EntitySet="userlog" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HamroLibraryDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="author">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="lname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="book_id" Type="Int32" />
+          <NavigationProperty Name="book" Relationship="Self.FK_author_book" FromRole="author" ToRole="book" />
+        </EntityType>
+        <EntityType Name="book">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="isbn" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="qty" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="cover" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="shelfno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="published_date" Type="DateTime" Precision="0" />
+          <Property Name="edition" Type="Binary" MaxLength="50" FixedLength="false" />
+          <Property Name="copyno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="restricted" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="authors" Relationship="Self.FK_author_book" FromRole="book" ToRole="author" />
+          <NavigationProperty Name="Stocks" Relationship="Self.FK_book" FromRole="book" ToRole="Stocks" />
+          <NavigationProperty Name="Loans" Relationship="Self.FK_Loan_Book" FromRole="book" ToRole="Loan" />
+          <NavigationProperty Name="publishers" Relationship="Self.FK_publisher_book" FromRole="book" ToRole="publisher" />
+        </EntityType>
+        <EntityType Name="bookreturn">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="loan_id" Type="Int32" />
+          <Property Name="return_date" Type="DateTime" Precision="0" />
+          <Property Name="actual_return_date" Type="DateTime" Precision="0" />
+          <Property Name="due_fine" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Loan" Relationship="Self.FK_bookreturn_Loan" FromRole="bookreturn" ToRole="Loan" />
+        </EntityType>
+        <EntityType Name="Loan">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="book_id" Type="Int32" />
+          <Property Name="member_id" Type="Int32" />
+          <Property Name="issue_date" Type="DateTime" Precision="3" />
+          <Property Name="return_date" Type="DateTime" Precision="3" />
+          <Property Name="loan_request" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="book" Relationship="Self.FK_Loan_Book" FromRole="Loan" ToRole="book" />
+          <NavigationProperty Name="bookreturns" Relationship="Self.FK_bookreturn_Loan" FromRole="Loan" ToRole="bookreturn" />
+          <NavigationProperty Name="loanCharges" Relationship="Self.FK_loanCharge_Loan" FromRole="Loan" ToRole="loanCharge" />
+          <NavigationProperty Name="loanTypes" Relationship="Self.FK_loanType_loan" FromRole="Loan" ToRole="loanType" />
+        </EntityType>
+        <EntityType Name="loanCharge">
+          <Key>
+            <PropertyRef Name="charge_id" />
+          </Key>
+          <Property Name="charge_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="minday" Type="Int32" Nullable="false" />
+          <Property Name="maxday" Type="Int32" Nullable="false" />
+          <Property Name="charge_amount" Type="Double" />
+          <Property Name="loan_id" Type="Int32" />
+          <NavigationProperty Name="Loan" Relationship="Self.FK_loanCharge_Loan" FromRole="loanCharge" ToRole="Loan" />
+        </EntityType>
+        <EntityType Name="loanType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="member_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="charge" Type="Int32" />
+          <Property Name="totalLoans" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="member_id" Type="Int32" />
+          <Property Name="loan_id" Type="Int32" />
+          <NavigationProperty Name="Loan" Relationship="Self.FK_loanType_loan" FromRole="loanType" ToRole="Loan" />
+          <NavigationProperty Name="member" Relationship="Self.FK_loanType_member" FromRole="loanType" ToRole="member" />
+        </EntityType>
+        <EntityType Name="member">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="lname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dob" Type="DateTime" Precision="0" />
+          <Property Name="phone" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="mobile" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="user_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="loanTypes" Relationship="Self.FK_loanType_member" FromRole="member" ToRole="loanType" />
+          <NavigationProperty Name="membertypes" Relationship="Self.FK_membertype_member" FromRole="member" ToRole="membertype" />
+        </EntityType>
+        <EntityType Name="membertype">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="charge" Type="Int32" />
+          <Property Name="totalLoans" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="member_id" Type="Int32" />
+          <NavigationProperty Name="member" Relationship="Self.FK_membertype_member" FromRole="membertype" ToRole="member" />
+        </EntityType>
+        <EntityType Name="publisher">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="contcat" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="book_id" Type="Int32" />
+          <NavigationProperty Name="book" Relationship="Self.FK_publisher_book" FromRole="publisher" ToRole="book" />
+        </EntityType>
+        <EntityType Name="Stock">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="book_id" Type="Int32" />
+          <Property Name="available_qty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="book" Relationship="Self.FK_book" FromRole="Stocks" ToRole="book" />
+        </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="book_id" Type="Int32" />
+          <Property Name="available_qty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="mobile" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="dob" Type="DateTime" Precision="0" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="update_at" Type="DateTime" Precision="3" />
+          <Property Name="user_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="userlogs" Relationship="Self.FK_userlog_User" FromRole="user" ToRole="userlog" />
+        </EntityType>
+        <EntityType Name="userlog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="w_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="time" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="user" Relationship="Self.FK_userlog_User" FromRole="userlog" ToRole="user" />
+        </EntityType>
+        <Association Name="FK_author_book">
+          <End Role="book" Type="Self.book" Multiplicity="0..1" />
+          <End Role="author" Type="Self.author" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="book">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="author">
+              <PropertyRef Name="book_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_book">
+          <End Role="book" Type="Self.book" Multiplicity="0..1" />
+          <End Role="Stocks" Type="Self.Stock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="book">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Stocks">
+              <PropertyRef Name="book_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Loan_Book">
+          <End Role="book" Type="Self.book" Multiplicity="0..1" />
+          <End Role="Loan" Type="Self.Loan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="book">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Loan">
+              <PropertyRef Name="book_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_publisher_book">
+          <End Role="book" Type="Self.book" Multiplicity="0..1" />
+          <End Role="publisher" Type="Self.publisher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="book">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="publisher">
+              <PropertyRef Name="book_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_bookreturn_Loan">
+          <End Role="Loan" Type="Self.Loan" Multiplicity="0..1" />
+          <End Role="bookreturn" Type="Self.bookreturn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Loan">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="bookreturn">
+              <PropertyRef Name="loan_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_loanCharge_Loan">
+          <End Role="Loan" Type="Self.Loan" Multiplicity="0..1" />
+          <End Role="loanCharge" Type="Self.loanCharge" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Loan">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="loanCharge">
+              <PropertyRef Name="loan_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_loanType_loan">
+          <End Role="Loan" Type="Self.Loan" Multiplicity="0..1" />
+          <End Role="loanType" Type="Self.loanType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Loan">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="loanType">
+              <PropertyRef Name="member_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_loanType_member">
+          <End Role="member" Type="Self.member" Multiplicity="0..1" />
+          <End Role="loanType" Type="Self.loanType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="member">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="loanType">
+              <PropertyRef Name="member_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_membertype_member">
+          <End Role="member" Type="Self.member" Multiplicity="0..1" />
+          <End Role="membertype" Type="Self.membertype" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="member">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="membertype">
+              <PropertyRef Name="member_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_userlog_User">
+          <End Role="user" Type="Self.user" Multiplicity="0..1" />
+          <End Role="userlog" Type="Self.userlog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="userlog">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HamroLibraryDbEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="authors" EntityType="Self.author" />
+          <EntitySet Name="books" EntityType="Self.book" />
+          <EntitySet Name="bookreturns" EntityType="Self.bookreturn" />
+          <EntitySet Name="Loans" EntityType="Self.Loan" />
+          <EntitySet Name="loanCharges" EntityType="Self.loanCharge" />
+          <EntitySet Name="loanTypes" EntityType="Self.loanType" />
+          <EntitySet Name="members" EntityType="Self.member" />
+          <EntitySet Name="membertypes" EntityType="Self.membertype" />
+          <EntitySet Name="publishers" EntityType="Self.publisher" />
+          <EntitySet Name="Stocks" EntityType="Self.Stock" />
+          <EntitySet Name="Tables" EntityType="Self.Table" />
+          <EntitySet Name="users" EntityType="Self.user" />
+          <EntitySet Name="userlogs" EntityType="Self.userlog" />
+          <AssociationSet Name="FK_author_book" Association="Self.FK_author_book">
+            <End Role="book" EntitySet="books" />
+            <End Role="author" EntitySet="authors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_book" Association="Self.FK_book">
+            <End Role="book" EntitySet="books" />
+            <End Role="Stocks" EntitySet="Stocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Loan_Book" Association="Self.FK_Loan_Book">
+            <End Role="book" EntitySet="books" />
+            <End Role="Loan" EntitySet="Loans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_publisher_book" Association="Self.FK_publisher_book">
+            <End Role="book" EntitySet="books" />
+            <End Role="publisher" EntitySet="publishers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_bookreturn_Loan" Association="Self.FK_bookreturn_Loan">
+            <End Role="Loan" EntitySet="Loans" />
+            <End Role="bookreturn" EntitySet="bookreturns" />
+          </AssociationSet>
+          <AssociationSet Name="FK_loanCharge_Loan" Association="Self.FK_loanCharge_Loan">
+            <End Role="Loan" EntitySet="Loans" />
+            <End Role="loanCharge" EntitySet="loanCharges" />
+          </AssociationSet>
+          <AssociationSet Name="FK_loanType_loan" Association="Self.FK_loanType_loan">
+            <End Role="Loan" EntitySet="Loans" />
+            <End Role="loanType" EntitySet="loanTypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_loanType_member" Association="Self.FK_loanType_member">
+            <End Role="member" EntitySet="members" />
+            <End Role="loanType" EntitySet="loanTypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_membertype_member" Association="Self.FK_membertype_member">
+            <End Role="member" EntitySet="members" />
+            <End Role="membertype" EntitySet="membertypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_userlog_User" Association="Self.FK_userlog_User">
+            <End Role="user" EntitySet="users" />
+            <End Role="userlog" EntitySet="userlogs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HamroLibraryDbModelStoreContainer" CdmEntityContainer="HamroLibraryDbEntities1">
+          <EntitySetMapping Name="authors">
+            <EntityTypeMapping TypeName="HamroLibraryDbModel.author">
+              <MappingFragment StoreEntitySet="author">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="lname" ColumnName="lname" />
+                <ScalarProperty Name="fname" ColumnName="fname" />
+                <ScalarProperty Name="book_id" ColumnName="book_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="books">
+            <EntityTypeMapping TypeName="HamroLibraryDbModel.book">
+              <MappingFragment StoreEntitySet="book">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="isbn" ColumnName="isbn" />
+                <ScalarProperty Name="qty" ColumnName="qty" />
+                <ScalarProperty Name="cover" ColumnName="cover" />
+                <ScalarProperty Name="shelfno" ColumnName="shelfno" />
+                <ScalarProperty Name="published_date" ColumnName="published_date" />
+                <ScalarProperty Name="edition" ColumnName="edition" />
+                <ScalarProperty Name="copyno" ColumnName="copyno" />
+                <ScalarProperty Name="restricted" ColumnName="restricted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bookreturns">
+            <EntityTypeMapping TypeName="HamroLibraryDbModel.bookreturn">
+              <MappingFragment StoreEntitySet="bookreturn">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="loan_id" ColumnName="loan_id" />
+                <ScalarProperty Name="return_date" ColumnName="return_date" />
+                <ScalarProperty Name="actual_return_date" ColumnName="actual_return_date" />
+                <ScalarProperty Name="due_fine" ColumnName="due_fine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Loans">
+            <EntityTypeMapping TypeName="HamroLibraryDbModel.Loan">
+              <MappingFragment StoreEntitySet="Loan">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="book_id" ColumnName="book_id" />
+                <ScalarProperty Name="member_id" ColumnName="member_id" />
+                <ScalarProperty Name="issue_date" ColumnName="issue_date" />
+                <ScalarProperty Name="return_date" ColumnName="return_date" />
+                <ScalarProperty Name="loan_request" ColumnName="loan_request" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="loanCharges">
+            <EntityTypeMapping TypeName="HamroLibraryDbModel.loanCharge">
+              <MappingFragment StoreEntitySet="loanCharge">
+                <ScalarProperty Name="charge_id" ColumnName="charge_id" />
+                <ScalarProperty Name="minday" ColumnName="minday" />
+                <ScalarProperty Name="maxday" ColumnName="maxday" />
+                <ScalarProperty Name="charge_amount" ColumnName="charge_amount" />
+                <ScalarProperty Name="loan_id" ColumnName="loan_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="loanTypes">
+            <EntityTypeMapping TypeName="HamroLibraryDbModel.loanType">
+              <MappingFragment StoreEntitySet="loanType">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="member_type" ColumnName="member_type" />
+                <ScalarProperty Name="charge" ColumnName="charge" />
+                <ScalarProperty Name="totalLoans" ColumnName="totalLoans" />
+                <ScalarProperty Name="member_id" ColumnName="member_id" />
+                <ScalarProperty Name="loan_id" ColumnName="loan_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="members">
+            <EntityTypeMapping TypeName="HamroLibraryDbModel.member">
+              <MappingFragment StoreEntitySet="member">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="fname" ColumnName="fname" />
+                <ScalarProperty Name="lname" ColumnName="lname" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="dob" ColumnName="dob" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="mobile" ColumnName="mobile" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="membertypes">
+            <EntityTypeMapping TypeName="HamroLibraryDbModel.membertype">
+              <MappingFragment StoreEntitySet="membertype">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="charge" ColumnName="charge" />
+                <ScalarProperty Name="totalLoans" ColumnName="totalLoans" />
+                <ScalarProperty Name="member_id" ColumnName="member_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="publishers">
+            <EntityTypeMapping TypeName="HamroLibraryDbModel.publisher">
+              <MappingFragment StoreEntitySet="publisher">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="contcat" ColumnName="contcat" />
+                <ScalarProperty Name="book_id" ColumnName="book_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Stocks">
+            <EntityTypeMapping TypeName="HamroLibraryDbModel.Stock">
+              <MappingFragment StoreEntitySet="Stocks">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="book_id" ColumnName="book_id" />
+                <ScalarProperty Name="available_qty" ColumnName="available_qty" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tables">
+            <EntityTypeMapping TypeName="HamroLibraryDbModel.Table">
+              <MappingFragment StoreEntitySet="Table">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="book_id" ColumnName="book_id" />
+                <ScalarProperty Name="available_qty" ColumnName="available_qty" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="HamroLibraryDbModel.user">
+              <MappingFragment StoreEntitySet="user">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="mobile" ColumnName="mobile" />
+                <ScalarProperty Name="dob" ColumnName="dob" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="update_at" ColumnName="update_at" />
+                <ScalarProperty Name="user_type" ColumnName="user_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="userlogs">
+            <EntityTypeMapping TypeName="HamroLibraryDbModel.userlog">
+              <MappingFragment StoreEntitySet="userlog">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="w_type" ColumnName="w_type" />
+                <ScalarProperty Name="time" ColumnName="time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

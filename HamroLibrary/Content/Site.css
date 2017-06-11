@@ -1,0 +1,94 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-top:20px !important;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="select"] {
+    max-width: 280px;
+}
+
+/*custom overrides*/
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+    background-color: #4cff00;
+    border-color: #4cff00;
+}
+.navbar-nav { padding-top:30px; }
+
+.logout-pad { padding-top:16px; padding-bottom:16px; }
+
+.text_wc { color:#808080; line-height:56px; float:left; padding-right:5px;}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    padding-top: 20px;
+}
+.coverPlaceholder {
+    background-color: #f5f5f4;
+    padding: 8px;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+/*search button color-profile default page*/
+.form-control1 { 
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.form-control { 
+    max-width:280px !important;
+}
+
+
+/*form creating custom padding*/
+.paddingtopbtm {
+    padding:10px 0px;
+}
+.paddingtopbtm160 { padding:160px 0px; }
+.paddingtopbtm40 { padding:40px 0px; }
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+    .body-content {
+        padding: 0;
+    }
+}

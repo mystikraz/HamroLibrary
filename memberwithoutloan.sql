@@ -1,0 +1,1 @@
+﻿Select DISTINCT member.Id, member.fname, member.lname, member.[address], Loan_Issue.issue_date, book.name as BookTitle from member,book,Loan_Issue where member.Id not in (SELECT m_id from Loan_Issue where Issue_date>=26/05/2017) 

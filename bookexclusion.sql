@@ -1,0 +1,1 @@
+﻿Select member.fname, member.lname, member.address, Loan_Issue.issue_date, book.name as BookTitle from member inner join Loan_Issue on Loan_Issue.m_id=member.Id inner join book on book.Id=Loan_Issue.book_id where member.Id NOT IN(SELECT m_id from Loan_Issue where Issue_date>=26/05/2017 group by Issue_date)

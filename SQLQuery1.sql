@@ -1,0 +1,1 @@
+﻿SELECT Id, name, password, email, address, mobile, dob from [user] where name='raj'
